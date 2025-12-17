@@ -1,0 +1,49 @@
+{
+  "about": {
+    "name": "Audrey Thornal",
+    "title": "Game Designer & Developer",
+    "bio": "CS & Game Design student at Northeastern University passionate about creating immersive interactive experiences. I combine technical skills with creative storytelling to build games and applications that engage and inspire."
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Wallace - Historical Interactive Fiction",
+      "category": "game-design",
+      "description": "An immersive Gilded Age branching narrative game that explores historical themes through player choices and multiple storylines.",
+      "tech": ["Twine", "Unity", "JavaScript"],
+      "image": "/images/wallace.png",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Portfolio Website",
+      "category": "programming",
+      "description": "A modern, responsive portfolio built with React showcasing my work in game design, programming, and visual design.",
+      "tech": ["React", "Vite", "CSS"],
+      "image": "/images/portfolio.png",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Character Design Collection",
+      "category": "art",
+      "description": "A series of original character designs exploring diverse personalities and visual styles for game development.",
+      "tech": ["Photoshop", "Illustrator", "Procreate"],
+      "image": "/images/characters.png",
+      "links": {
+        "demo": "#"
+      }
+    }
+  ],
+  "contact": {
+    "email": "thornal.a@northeastern.edu",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername"
+  }
+}

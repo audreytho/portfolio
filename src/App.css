@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* About Section */
+#about {
+    background: white;
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+#about > p:first-of-type {
+    font-size: 24px;
+    color: #2563eb;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#about > p:last-of-type {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+#projects {
+    margin-bottom: 60px;
+}
+
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.project-card > h3,
+.project-card > p,
+.project-card > .tech-stack,
+.project-card > .links {
+    padding: 0 24px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin: 20px 24px 10px 24px;
+    color: #1a1a1a;
+}
+
+.project-card > p {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.links {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px 24px 24px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.links a:hover {
+    background: #1d4ed8;
+}
+
+/* Contact Section */
+#contact {
+    background: white;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.contact-links a:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .App {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+    
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    #about {
+        padding: 40px 20px;
+    }
+    
+    #about h1 {
+        font-size: 36px;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
