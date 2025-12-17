@@ -1,9 +1,21 @@
 function ProjectCard({ project }) {
-    // Map categories to colors
+    // Map categories to Sky Dreams colors
     const categoryColors = {
-        'game-design': { bg: 'rgba(239, 68, 68, 0.1)', text: '#dc2626', border: 'rgba(239, 68, 68, 0.2)' },
-        'programming': { bg: 'rgba(59, 130, 246, 0.1)', text: '#2563eb', border: 'rgba(59, 130, 246, 0.2)' },
-        'art': { bg: 'rgba(168, 85, 247, 0.1)', text: '#9333ea', border: 'rgba(168, 85, 247, 0.2)' }
+        'game-design': { 
+            bg: 'rgba(255, 204, 234, 0.5)', 
+            text: '#d95fa3', 
+            border: 'rgba(255, 204, 234, 0.8)' 
+        },
+        'programming': { 
+            bg: 'rgba(191, 236, 255, 0.5)', 
+            text: '#4da6c7', 
+            border: 'rgba(191, 236, 255, 0.8)' 
+        },
+        'art': { 
+            bg: 'rgba(205, 193, 255, 0.4)', 
+            text: '#8a7bcf', 
+            border: 'rgba(205, 193, 255, 0.8)' 
+        }
     };
 
     const categoryStyle = categoryColors[project.category] || categoryColors['programming'];

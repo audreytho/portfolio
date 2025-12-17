@@ -14,7 +14,7 @@
       "image": "/images/wallace.png",
       "links": {
         "demo": "#",
-        "github": "#"
+        "github": "https://github.com/audreytho/portfolio"
       }
     },
     {
@@ -26,7 +26,7 @@
       "image": "/images/portfolio.png",
       "links": {
         "demo": "#",
-        "github": "#"
+        "github": "https://github.com/audreytho/portfolio"
       }
     },
     {
@@ -43,7 +43,7 @@
   ],
   "contact": {
     "email": "thornal.a@northeastern.edu",
-    "github": "https://github.com/yourusername",
+    "github": "https://github.com/audreytho",
     "linkedin": "https://linkedin.com/in/yourusername"
   }
 }
