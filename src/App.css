@@ -13,14 +13,10 @@ body {
 }
 
 .App {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px;
-    background: #FEFEFA;
     min-height: 100vh;
 }
 
-/* Header - Top Right Corner */
+/* Header - Top Right Corner (only on sub-pages) */
 header {
     position: fixed;
     top: 40px;
@@ -57,48 +53,10 @@ nav a:hover {
 
 /* Main Content Area */
 main {
-    padding-top: 60px;
-}
-
-/* About Section - Large Content Box */
-#about {
-    border: 4px solid #1a1a1a;
-    padding: 60px;
-    margin-bottom: 80px;
-    background: white;
-    position: relative;
-}
-
-#about::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 8px solid #1a1a1a;
-    pointer-events: none;
-}
-
-#about h1 {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 24px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-
-#about > p:first-of-type {
-    font-size: 16px;
-    margin-bottom: 30px;
-    line-height: 1.8;
-    color: #333;
-}
-
-#about > p:last-of-type {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 100px;
 }
 
 /* Section Title */
@@ -345,16 +303,14 @@ main {
         gap: 10px;
     }
     
-    .App {
+    main {
         padding: 20px;
     }
     
-    #about,
     #contact {
         padding: 30px 20px;
     }
     
-    #about h1,
     #projects h2,
     #contact h2 {
         font-size: 18px;
