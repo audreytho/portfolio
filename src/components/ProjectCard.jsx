@@ -1,33 +1,25 @@
 function ProjectCard({ project }) {
-    // Map categories to Sky Dreams colors
+    // Map categories to colors for badge text
     const categoryColors = {
         'game-design': { 
-            bg: 'rgba(255, 204, 234, 0.5)', 
-            text: '#d95fa3', 
-            border: 'rgba(255, 204, 234, 0.8)' 
+            text: '#1a1a1a'
         },
         'programming': { 
-            bg: 'rgba(191, 236, 255, 0.5)', 
-            text: '#4da6c7', 
-            border: 'rgba(191, 236, 255, 0.8)' 
+            text: '#1a1a1a'
         },
         'art': { 
-            bg: 'rgba(205, 193, 255, 0.4)', 
-            text: '#8a7bcf', 
-            border: 'rgba(205, 193, 255, 0.8)' 
+            text: '#1a1a1a'
         }
     };
 
     const categoryStyle = categoryColors[project.category] || categoryColors['programming'];
 
     return (
-        <div className="project-card">
+        <div className={`project-card ${project.category}`}>
             <div className="category-badge" style={{
-                background: categoryStyle.bg,
-                color: categoryStyle.text,
-                border: `1px solid ${categoryStyle.border}`
+                color: categoryStyle.text
             }}>
-                {project.category.replace('-', ' ')}
+                {project.category.replace('-', ' ').toUpperCase()}
             </div>
             <img src={project.image} alt={project.title} />
             <h3>{project.title}</h3>
@@ -38,8 +30,8 @@ function ProjectCard({ project }) {
                 ))}
             </div>
             <div className="links">
-                {project.links.demo && <a href={project.links.demo}>View Demo</a>}
-                {project.links.github && <a href={project.links.github}>View Code</a>}
+                {project.links.demo && <a href={project.links.demo}>DEMO</a>}
+                {project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer">CODE</a>}
             </div>
         </div>
     )
