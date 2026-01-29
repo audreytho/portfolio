@@ -1,7 +1,6 @@
 function Header() {
     return (
         <header>
-            <h2>MENU</h2>
             <nav>
                 <ul>
                     <li><a href="#projects">WORK</a></li>
