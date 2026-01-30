@@ -1,16 +1,20 @@
 .about-page {
     min-height: 100vh;
     background: #FEFEFA;
-    padding: 100px 40px 60px 40px;
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.about-window {
+    max-width: 1400px;
+    width: 100%;
+    background: white;
+    border: 4px solid #1a1a1a;
+    position: relative;
     animation: gentleFloat 3s ease-in-out infinite;
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
+    padding: 60px;
 }
 
 @keyframes gentleFloat {
@@ -22,17 +26,53 @@
     }
 }
 
-.about-photo-main {
-    flex-shrink: 0;
-    width: 400px;
+.about-window::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 8px solid #1a1a1a;
+    pointer-events: none;
 }
 
-.about-photo-main img {
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #1a1a1a;
+    background: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Pixelify Sans', sans-serif;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    background: #1a1a1a;
+    color: white;
+}
+
+.about-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about-photo {
+    flex-shrink: 0;
+    width: 350px;
+}
+
+.about-photo img {
     width: 100%;
     height: auto;
-    border: 4px solid #1a1a1a;
     display: block;
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+    border-radius: 12px;
 }
 
 .about-text {
@@ -48,56 +88,36 @@
     letter-spacing: 1px;
 }
 
-.about-text h2 {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 32px;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-
 .about-text p {
     font-family: 'Inter', sans-serif;
     font-size: 19px;
     line-height: 1.8;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 400;
-}
-
-.about-text a {
-    color: #1a1a1a;
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-
-.about-text a:hover {
-    color: #666;
 }
 
 @media (max-width: 968px) {
     .about-page {
-        padding: 120px 20px 40px 20px;
+        padding: 100px 20px;
     }
     
-    .about-content {
+    .about-window {
+        padding: 40px 30px;
+    }
+    
+    .about-layout {
         flex-direction: column;
         gap: 40px;
     }
     
-    .about-photo-main {
+    .about-photo {
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
     }
     
     .about-text h1 {
         font-size: 40px;
-    }
-    
-    .about-text h2 {
-        font-size: 28px;
-        margin-top: 40px;
     }
     
     .about-text p {

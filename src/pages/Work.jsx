@@ -12,8 +12,6 @@ function Work() {
     return (
         <div className="work-page">
             <section id="projects">
-                <h2>WHEN I'M NOT IN CLASS</h2>
-                
                 <div className="project-tabs">
                     <div 
                         className={`tab ${activeTab === 'all' ? 'active' : ''}`}
