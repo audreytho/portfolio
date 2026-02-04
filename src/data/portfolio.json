@@ -7,6 +7,29 @@
   "projects": [
     {
       "id": 1,
+      "title": "Fortunes in the Dark",
+      "category": "game-design",
+      "description": "Horror survival RPG where you play as a lost traveler navigating a mysterious forest with limited resources. Currently in development for Northeastern's CAMD Fall Showcase, transitioning from analog prototype to digital game.",
+      "tech": ["Unity", "C#", "Game Design"],
+      "image": "/images/fortunesinthedark.png",
+      "links": {
+        "demo": "#"
+      }
+    },
+    {
+      "id": 2,
+      "title": "What Remains of Me",
+      "category": "game-design",
+      "description": "Puzzle platformer where you play as Atlas, a reactivated robot exploring an abandoned post-apocalyptic facility. Led project management team of 5, implementing Agile methodologies and driving 3000% TikTok growth for GDC 2025 showcase. Published to Steam.",
+      "tech": ["Unity", "C#", "Jira", "Agile Scrum"],
+      "image": "/images/whatremainsofme.png",
+      "links": {
+        "demo": "https://store.steampowered.com/app/whatremainsofme",
+        "github": "#"
+      }
+    },
+    {
+      "id": 3,
       "title": "Wallace - Historical Interactive Fiction",
       "category": "game-design",
       "description": "An immersive Gilded Age branching narrative game that explores historical themes through player choices and multiple storylines.",
@@ -18,7 +41,18 @@
       }
     },
     {
-      "id": 2,
+      "id": 4,
+      "title": "Pact - AI-Powered Habit Tracking App",
+      "category": "programming",
+      "description": "Cross-platform mobile app leveraging AI to match users for personalized habit tracking. Built full-stack MVP with Google OAuth integration, featuring tailored recommendations and secure user authentication.",
+      "tech": ["React Native", "Python", "MongoDB", "Google Cloud OAuth", "Nativewind"],
+      "image": "/images/pact.png",
+      "links": {
+        "github": "https://github.com/audreytho/Pact"
+      }
+    },
+    {
+      "id": 5,
       "title": "Portfolio Website",
       "category": "programming",
       "description": "A modern, responsive portfolio built with React showcasing my work in game design, programming, and visual design.",
@@ -30,7 +64,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "Character Design Collection",
       "category": "art",
       "description": "A series of original character designs exploring diverse personalities and visual styles for game development.",
