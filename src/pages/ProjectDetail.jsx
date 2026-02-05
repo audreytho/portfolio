@@ -26,9 +26,6 @@ function ProjectDetail() {
                 </button>
 
                 <div className="project-detail-header">
-                    <div className="category-badge">
-                        {project.category.replace('-', ' ').toUpperCase()}
-                    </div>
                     <h1>{project.title}</h1>
                 </div>
 
@@ -36,39 +33,77 @@ function ProjectDetail() {
                     <img src={project.image} alt={project.title} />
                 </div>
 
-                <div className="project-detail-content">
-                    <section className="project-section">
-                        <h2>About This Project</h2>
-                        <p>{project.description}</p>
-                    </section>
+                <div className="project-meta-grid">
+                    <div className="project-meta-column">
+                        <div className="meta-section">
+                            <h3>My Role</h3>
+                            <p>{project.role || "Role information coming soon"}</p>
+                        </div>
 
-                    {project.detailedDescription && (
-                        <section className="project-section">
-                            <h2>Project Details</h2>
-                            <p>{project.detailedDescription}</p>
-                        </section>
-                    )}
+                        <div className="meta-section">
+                            <h3>Duration</h3>
+                            <p>{project.duration || "Duration information coming soon"}</p>
+                        </div>
 
-                    {project.highlights && (
-                        <section className="project-section">
-                            <h2>Key Highlights</h2>
-                            <ul className="highlights-list">
-                                {project.highlights.map((highlight, index) => (
-                                    <li key={index}>{highlight}</li>
+                        <div className="meta-section">
+                            <h3>Tools Used</h3>
+                            <div className="tools-list">
+                                {project.tech.map(tech => (
+                                    <span key={tech} className="tool-item">{tech}</span>
                                 ))}
-                            </ul>
-                        </section>
-                    )}
+                            </div>
+                        </div>
 
-                    <section className="project-section">
-                        <h2>Technologies Used</h2>
-                        <div className="tech-stack">
-                            {project.tech.map(tech => (
-                                <span key={tech} className="tech-tag">{tech}</span>
+                        {project.team && project.team.length > 0 && (
+                            <div className="meta-section">
+                                <h3>Team</h3>
+                                <ul className="team-list">
+                                    {project.team.map((member, index) => (
+                                        <li key={index}>
+                                            <span className="team-name">{member.name}</span>
+                                            {member.role && <span className="team-role"> — {member.role}</span>}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="project-meta-column">
+                        <div className="meta-section">
+                            <h3>About</h3>
+                            <p>{project.description}</p>
+                            {project.detailedDescription && (
+                                <p>{project.detailedDescription}</p>
+                            )}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Media Gallery Section - For future images/videos */}
+                {project.gallery && project.gallery.length > 0 && (
+                    <div className="project-gallery">
+                        <h2>Project Media</h2>
+                        <div className="gallery-grid">
+                            {project.gallery.map((item, index) => (
+                                <div key={index} className="gallery-item">
+                                    {item.type === 'image' && (
+                                        <img src={item.url} alt={item.caption || `Gallery image ${index + 1}`} />
+                                    )}
+                                    {item.type === 'video' && (
+                                        <video controls>
+                                            <source src={item.url} type="video/mp4" />
+                                        </video>
+                                    )}
+                                    {item.caption && <p className="gallery-caption">{item.caption}</p>}
+                                </div>
                             ))}
                         </div>
-                    </section>
+                    </div>
+                )}
 
+                {/* Links Section */}
+                {(project.links.demo && project.links.demo !== '#') || (project.links.github && project.links.github !== '#') ? (
                     <div className="project-links-section">
                         {project.links.demo && project.links.demo !== '#' && (
                             <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="project-link-btn">
@@ -81,7 +116,7 @@ function ProjectDetail() {
                             </a>
                         )}
                     </div>
-                </div>
+                ) : null}
             </div>
         </div>
     )

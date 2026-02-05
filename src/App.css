@@ -555,7 +555,7 @@ html {
 }
 
 .project-detail-container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -577,25 +577,14 @@ html {
 }
 
 .project-detail-header {
-    margin-bottom: 30px;
-}
-
-.project-detail-header .category-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 2px solid #1a1a1a;
-    background: white;
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .project-detail-header h1 {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 48px;
     color: #1a1a1a;
-    margin: 0 0 40px 0;
+    margin: 0;
     line-height: 1.2;
 }
 
@@ -612,65 +601,113 @@ html {
     border-radius: 12px;
 }
 
-.project-detail-content {
-    /* No card styling - flat layout */
+/* Two Column Metadata Layout */
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    margin-bottom: 80px;
 }
 
-.project-section {
-    margin-bottom: 50px;
+.project-meta-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.project-section:last-of-type {
-    margin-bottom: 0;
-}
-
-.project-section h2 {
+.meta-section h3 {
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 16px;
     color: #1a1a1a;
     text-transform: uppercase;
+    margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
-.project-section p {
+.meta-section p {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
     color: #333;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
-.highlights-list {
-    list-style: none;
-    padding: 0;
-}
-
-.highlights-list li {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-    padding-left: 30px;
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.highlights-list li:before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #1a1a1a;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.project-section .tech-stack {
+/* Tools List */
+.tools-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
+.tool-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+    background: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Team List */
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.team-name {
+    font-weight: 600;
+}
+
+.team-role {
+    color: #666;
+}
+
+/* Gallery Section */
+.project-gallery {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.project-gallery h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.gallery-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Links Section */
 .project-links-section {
     display: flex;
     gap: 15px;
@@ -717,13 +754,9 @@ html {
         font-size: 32px;
     }
     
-    .project-section h2 {
-        font-size: 18px;
-    }
-    
-    .project-section p,
-    .highlights-list li {
-        font-size: 16px;
+    .project-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
     
     .project-links-section {
