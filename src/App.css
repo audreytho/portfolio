@@ -603,7 +603,7 @@ body {
 .project-detail-image {
     width: 100%;
     margin-bottom: 60px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .project-detail-image img {
@@ -619,7 +619,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .project-meta-column {
