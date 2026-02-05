@@ -53,9 +53,9 @@
     },
     {
       "id": 5,
-      "title": "ReCoop - Collaborative Co-op Prep Platform",
+      "title": "ReCoop",
       "category": "programming",
-      "description": "Full-stack web platform connecting Northeastern students for collaborative co-op preparation. Features group formation, mock interviews, resource sharing, mentorship matching with alumni, and gamified prep sessions with leaderboards.",
+      "description": "ReCoop is a collaborative co-op prep platform - a full-stack web platform connecting Northeastern students for collaborative co-op preparation. Features group formation, mock interviews, resource sharing, mentorship matching with alumni, and gamified prep sessions with leaderboards.",
       "tech": ["React", "Node.js", "MongoDB", "UI/UX Design"],
       "image": "/images/recoop.png",
       "links": {
