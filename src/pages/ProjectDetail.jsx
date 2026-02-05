@@ -92,22 +92,24 @@ useLayoutEffect(() => {
                     <img src={project.image} alt={project.title} />
                 </div>
 
-                {/* Wireframes Section */}
-                <div className="project-wireframes">
-                    <h2>Wireframes</h2>
-                    {project.wireframes && project.wireframes.length > 0 ? (
-                        <div className="wireframes-grid">
-                            {project.wireframes.map((item, index) => (
-                                <div key={index} className="wireframe-item">
-                                    <img src={item.url} alt={item.caption || `Wireframe ${index + 1}`} />
-                                    {item.caption && <p className="wireframe-caption">{item.caption}</p>}
-                                </div>
-                            ))}
-                        </div>
-                    ) : (
-                        <p className="coming-soon">Wireframes coming soon</p>
-                    )}
-                </div>
+                {/* Wireframes Section - Only for UI/UX (programming category) projects */}
+                {project.category === 'programming' && (
+                    <div className="project-wireframes">
+                        <h2>Wireframes</h2>
+                        {project.wireframes && project.wireframes.length > 0 ? (
+                            <div className="wireframes-grid">
+                                {project.wireframes.map((item, index) => (
+                                    <div key={index} className="wireframe-item">
+                                        <img src={item.url} alt={item.caption || `Wireframe ${index + 1}`} />
+                                        {item.caption && <p className="wireframe-caption">{item.caption}</p>}
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <p className="coming-soon">Wireframes coming soon</p>
+                        )}
+                    </div>
+                )}
 
                 {/* Media Gallery Section - For future images/videos */}
                 {project.gallery && project.gallery.length > 0 && (
