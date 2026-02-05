@@ -1,11 +1,17 @@
 import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import portfolioData from '../data/portfolio.json'
 
 function ProjectDetail() {
-    const { id } = useParams()
-    const navigate = useNavigate()
+const { id } = useParams()
+const navigate = useNavigate()
 
     const project = portfolioData.projects.find(p => p.id === parseInt(id))
+    
+    // Scroll to top when component loads
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [id])
 
     if (!project) {
         return (
