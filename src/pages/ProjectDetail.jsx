@@ -36,7 +36,7 @@ useLayoutEffect(() => {
                 </button>
 
                 <div className="project-detail-header">
-                    <h1>{project.title}</h1>
+                    <h1>Context</h1>
                 </div>
 
                 <div className="project-meta-grid">
