@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Work from './pages/Work'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import ProjectDetail from './pages/ProjectDetail'
 import './App.css'
 
 function App() {
@@ -15,6 +16,12 @@ function App() {
                     <div className="App">
                         <Header />
                         <main><Work /></main>
+                    </div>
+                } />
+                <Route path="/project/:id" element={
+                    <div className="App">
+                        <Header />
+                        <main><ProjectDetail /></main>
                     </div>
                 } />
                 <Route path="/about" element={

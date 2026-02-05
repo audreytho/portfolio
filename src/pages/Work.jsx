@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import ProjectCard from '../components/ProjectCard'
-import ProjectModal from '../components/ProjectModal'
 import portfolioData from '../data/portfolio.json'
 
 function Work() {
     const [activeTab, setActiveTab] = useState('all')
-    const [selectedProject, setSelectedProject] = useState(null)
+    const navigate = useNavigate()
 
     const filteredProjects = activeTab === 'all' 
         ? portfolioData.projects 
@@ -46,18 +46,11 @@ function Work() {
                         <ProjectCard 
                             key={project.id} 
                             project={project} 
-                            onClick={() => setSelectedProject(project)}
+                            onClick={() => navigate(`/project/${project.id}`)}
                         />
                     ))}
                 </div>
             </section>
-
-            {selectedProject && (
-                <ProjectModal 
-                    project={selectedProject} 
-                    onClose={() => setSelectedProject(null)}
-                />
-            )}
         </div>
     )
 }
