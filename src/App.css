@@ -120,6 +120,26 @@ main {
     position: relative;
     background: white;
     box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(-7px);
+    }
 }
 
 .category-badge {
@@ -143,6 +163,7 @@ main {
     display: block;
 }
 
+/* Fallback colored backgrounds for missing images */
 .project-card.game-design img {
     background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 100%);
 }
@@ -153,6 +174,14 @@ main {
 
 .project-card.art img {
     background: linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 100%);
+}
+
+/* Show colored background even when image fails to load */
+.project-card img[src*="characters.png"],
+.project-card img[src*="portfolio.png"],
+.project-card img[src*="fortunesinthedark.png"] {
+    content: '';
+    background-size: cover;
 }
 
 .project-card > h3,

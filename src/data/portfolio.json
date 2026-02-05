@@ -7,6 +7,17 @@
   "projects": [
     {
       "id": 1,
+      "title": "Steam Dreams",
+      "category": "game-design",
+      "description": "Managed cross-functional sprint planning across 6+ disciplines using Agile methodologies. Coordinated playtests, bug-tracking, asset pipeline management, and drove MVP execution across remote team.",
+      "tech": ["Unity", "C#", "Jira", "Agile Scrum"],
+      "image": "/images/steamdreams.png",
+      "links": {
+        "demo": "#"
+      }
+    },
+    {
+      "id": 2,
       "title": "Fortunes in the Dark",
       "category": "game-design",
       "description": "Horror survival RPG where you play as a lost traveler navigating a mysterious forest with limited resources. Currently in development for Northeastern's CAMD Fall Showcase, transitioning from analog prototype to digital game.",
@@ -17,7 +28,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "What Remains of Me",
       "category": "game-design",
       "description": "Puzzle platformer where you play as Atlas, a reactivated robot exploring an abandoned post-apocalyptic facility. Led project management team of 5, implementing Agile methodologies and driving 3000% TikTok growth for GDC 2025 showcase. Published to Steam.",
@@ -29,10 +40,10 @@
       }
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Wallace - Historical Interactive Fiction",
       "category": "game-design",
-      "description": "An immersive Gilded Age branching narrative game that explores historical themes through player choices and multiple storylines.",
+      "description": "2-week Halloween-themed Game Jam submission for Northeastern's Game Studio Club. PS1-inspired hyper-pixelated, low-poly aesthetic creating an eerie atmosphere with upbeat Overcooked-style gameplay. Unanimously adored by all club playtesters.",
       "tech": ["Twine", "Unity", "JavaScript"],
       "image": "/images/wallace.png",
       "links": {
@@ -41,7 +52,18 @@
       }
     },
     {
-      "id": 4,
+      "id": 5,
+      "title": "ReCoop - Collaborative Co-op Prep Platform",
+      "category": "programming",
+      "description": "Full-stack web platform connecting Northeastern students for collaborative co-op preparation. Features group formation, mock interviews, resource sharing, mentorship matching with alumni, and gamified prep sessions with leaderboards.",
+      "tech": ["React", "Node.js", "MongoDB", "UI/UX Design"],
+      "image": "/images/recoop.png",
+      "links": {
+        "github": "#"
+      }
+    },
+    {
+      "id": 6,
       "title": "Pact - AI-Powered Habit Tracking App",
       "category": "programming",
       "description": "Cross-platform mobile app leveraging AI to match users for personalized habit tracking. Built full-stack MVP with Google OAuth integration, featuring tailored recommendations and secure user authentication.",
@@ -52,7 +74,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "Portfolio Website",
       "category": "programming",
       "description": "A modern, responsive portfolio built with React showcasing my work in game design, programming, and visual design.",
@@ -64,7 +86,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "Character Design Collection",
       "category": "art",
       "description": "A series of original character designs exploring diverse personalities and visual styles for game development.",
