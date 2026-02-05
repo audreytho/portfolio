@@ -594,7 +594,7 @@ body {
 
 .project-detail-header h1 {
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 48px;
+    font-size: 64px;
     color: #1a1a1a;
     margin: 0;
     line-height: 1.2;
@@ -665,6 +665,9 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
 }
 
 .team-list li {
@@ -672,7 +675,6 @@ body {
     font-size: 16px;
     line-height: 1.8;
     color: #333;
-    margin-bottom: 8px;
 }
 
 .team-name {
