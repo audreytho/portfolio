@@ -6,9 +6,14 @@ function ProjectDetail() {
 const { id } = useParams()
 const navigate = useNavigate()
 
-    const project = portfolioData.projects.find(p => p.id === parseInt(id))
+const project = portfolioData.projects.find(p => p.id === parseInt(id))
+
+// Scroll to top immediately when component mounts
+useEffect(() => {
+window.scrollTo(0, 0)
+}, [])
     
-    // Scroll to top when component loads
+    // Also scroll to top when project ID changes
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [id])
