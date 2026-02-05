@@ -1,4 +1,4 @@
-function ProjectCard({ project }) {
+function ProjectCard({ project, onClick }) {
     // Map categories to colors for badge text
     const categoryColors = {
         'game-design': { 
@@ -15,7 +15,7 @@ function ProjectCard({ project }) {
     const categoryStyle = categoryColors[project.category] || categoryColors['programming'];
 
     return (
-        <div className={`project-card ${project.category}`}>
+        <div className={`project-card ${project.category}`} onClick={onClick} style={{ cursor: 'pointer' }}>
             <div className="category-badge" style={{
                 color: categoryStyle.text
             }}>
@@ -29,7 +29,7 @@ function ProjectCard({ project }) {
                     <span key={tech} className="tech-tag">{tech}</span>
                 ))}
             </div>
-            <div className="links">
+            <div className="links" onClick={(e) => e.stopPropagation()}>
                 {project.links.demo && <a href={project.links.demo}>DEMO</a>}
                 {project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer">CODE</a>}
             </div>

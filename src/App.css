@@ -352,3 +352,193 @@ main {
 html {
     scroll-behavior: smooth;
 }
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    border: 2px solid #1a1a1a;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: 2px solid #1a1a1a;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: #1a1a1a;
+    color: white;
+}
+
+.modal-header {
+    padding: 40px 40px 20px 40px;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.modal-header h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+.modal-image-container {
+    width: 100%;
+    margin-bottom: 30px;
+    border: 2px solid #1a1a1a;
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-description,
+.modal-tech,
+.modal-detailed,
+.modal-highlights {
+    margin-bottom: 30px;
+}
+
+.modal-description h3,
+.modal-tech h3,
+.modal-detailed h3,
+.modal-highlights h3 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+
+.modal-description p,
+.modal-detailed p {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.modal-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-highlights li {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal-highlights li:before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.modal-tech .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.modal-links {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 2px solid #e8e8e8;
+}
+
+.modal-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    background: white;
+    padding: 12px 24px;
+    border: 2px solid #1a1a1a;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.modal-links a:hover {
+    background: #1a1a1a;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-height: 95vh;
+    }
+    
+    .modal-header,
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 24px;
+    }
+    
+    .modal-image-container img {
+        height: 250px;
+    }
+}

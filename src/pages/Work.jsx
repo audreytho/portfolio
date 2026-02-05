@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import ProjectCard from '../components/ProjectCard'
+import ProjectModal from '../components/ProjectModal'
 import portfolioData from '../data/portfolio.json'
 
 function Work() {
     const [activeTab, setActiveTab] = useState('all')
+    const [selectedProject, setSelectedProject] = useState(null)
 
     const filteredProjects = activeTab === 'all' 
         ? portfolioData.projects 
@@ -41,10 +43,21 @@ function Work() {
 
                 <div className="project-grid">
                     {filteredProjects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
+                        <ProjectCard 
+                            key={project.id} 
+                            project={project} 
+                            onClick={() => setSelectedProject(project)}
+                        />
                     ))}
                 </div>
             </section>
+
+            {selectedProject && (
+                <ProjectModal 
+                    project={selectedProject} 
+                    onClose={() => setSelectedProject(null)}
+                />
+            )}
         </div>
     )
 }
