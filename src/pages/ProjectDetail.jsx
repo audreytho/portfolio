@@ -77,7 +77,7 @@ useLayoutEffect(() => {
 
                     <div className="project-meta-column">
                         <div className="meta-section">
-                            <h3>Context</h3>
+                            <h3>About</h3>
                             <p>{project.description}</p>
                             {project.detailedDescription && (
                                 <p>{project.detailedDescription}</p>
