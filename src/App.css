@@ -353,9 +353,21 @@ main {
     }
 }
 
-/* Add smooth scrolling */
+/* Disable smooth scrolling to prevent visible scroll on navigation */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    overflow-x: hidden;
+}
+
+/* Force scroll position reset on page navigation */
+body {
+    overflow-x: hidden;
+}
+
+/* Prevent scroll restoration */
+.App {
+    min-height: 100vh;
+    position: relative;
 }
 
 /* Modal Styles */
