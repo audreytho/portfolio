@@ -93,9 +93,9 @@ useLayoutEffect(() => {
                 </div>
 
                 {/* Wireframes Section */}
-                {project.wireframes && project.wireframes.length > 0 && (
-                    <div className="project-wireframes">
-                        <h2>Wireframes</h2>
+                <div className="project-wireframes">
+                    <h2>Wireframes</h2>
+                    {project.wireframes && project.wireframes.length > 0 ? (
                         <div className="wireframes-grid">
                             {project.wireframes.map((item, index) => (
                                 <div key={index} className="wireframe-item">
@@ -104,8 +104,10 @@ useLayoutEffect(() => {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                )}
+                    ) : (
+                        <p className="coming-soon">Wireframes coming soon</p>
+                    )}
+                </div>
 
                 {/* Media Gallery Section - For future images/videos */}
                 {project.gallery && project.gallery.length > 0 && (

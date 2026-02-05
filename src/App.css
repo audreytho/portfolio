@@ -721,6 +721,13 @@ body {
     text-align: center;
 }
 
+.coming-soon {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #999;
+    font-style: italic;
+}
+
 /* Gallery Section */
 .project-gallery {
     margin-top: 80px;
