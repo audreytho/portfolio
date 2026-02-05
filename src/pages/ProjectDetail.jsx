@@ -40,15 +40,20 @@ useLayoutEffect(() => {
                 </div>
 
                 <div className="project-meta-grid">
-                    <div className="project-meta-column">
+                    <div className="project-meta-column project-meta-left">
                         <div className="meta-section">
-                            <h3>My Role</h3>
-                            <p>{project.role || "Role information coming soon"}</p>
+                            <h3>About</h3>
+                            <p>{project.description}</p>
+                            {project.detailedDescription && (
+                                <p>{project.detailedDescription}</p>
+                            )}
                         </div>
+                    </div>
 
+                    <div className="project-meta-column project-meta-middle">
                         <div className="meta-section">
-                            <h3>Duration</h3>
-                            <p>{project.duration || "Duration information coming soon"}</p>
+                            <h3>Role</h3>
+                            <p>{project.role || "Role information coming soon"}</p>
                         </div>
 
                         <div className="meta-section">
@@ -59,7 +64,9 @@ useLayoutEffect(() => {
                                 ))}
                             </div>
                         </div>
+                    </div>
 
+                    <div className="project-meta-column project-meta-right">
                         {project.team && project.team.length > 0 && (
                             <div className="meta-section">
                                 <h3>Team</h3>
@@ -67,21 +74,16 @@ useLayoutEffect(() => {
                                     {project.team.map((member, index) => (
                                         <li key={index}>
                                             <span className="team-name">{member.name}</span>
-                                            {member.role && <span className="team-role"> — {member.role}</span>}
+                                            {member.role && <span className="team-role"> ({member.role})</span>}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         )}
-                    </div>
 
-                    <div className="project-meta-column">
                         <div className="meta-section">
-                            <h3>About</h3>
-                            <p>{project.description}</p>
-                            {project.detailedDescription && (
-                                <p>{project.detailedDescription}</p>
-                            )}
+                            <h3>Duration</h3>
+                            <p>{project.duration || "Duration information coming soon"}</p>
                         </div>
                     </div>
                 </div>

@@ -56,6 +56,17 @@
       "title": "ReCoop",
       "category": "programming",
       "description": "ReCoop is a collaborative co-op prep platform - a full-stack web platform connecting Northeastern students for collaborative co-op preparation. Features group formation, mock interviews, resource sharing, mentorship matching with alumni, and gamified prep sessions with leaderboards.",
+      "role": "UI/UX Design, Frontend Development, Product Design and Ideation, Backend Development",
+      "duration": "Jan 2026 - Present",
+      "team": [
+        {"name": "Emily Ferry"},
+        {"name": "Jahnavi Bulusu"},
+        {"name": "Jolin Yang"},
+        {"name": "Maia Gonzalez"},
+        {"name": "Rai Makaraju"},
+        {"name": "Rhea Kallely"},
+        {"name": "Riya Roy"}
+      ],
       "tech": ["React", "Node.js", "MongoDB", "UI/UX Design"],
       "image": "/images/recoop.png",
       "links": {
