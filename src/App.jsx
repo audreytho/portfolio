@@ -12,6 +12,11 @@ function ScrollToTop() {
     const { pathname } = useLocation()
     
     useEffect(() => {
+        // Disable browser's scroll restoration
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual'
+        }
+        // Immediately scroll to top
         window.scrollTo(0, 0)
     }, [pathname])
     
@@ -19,6 +24,13 @@ function ScrollToTop() {
 }
 
 function App() {
+    // Set scroll restoration to manual on initial load
+    useEffect(() => {
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual'
+        }
+    }, [])
+    
     return (
         <Router>
             <ScrollToTop />
