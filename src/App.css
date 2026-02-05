@@ -113,6 +113,11 @@ main {
     margin-bottom: 80px;
 }
 
+/* Make last card full width if odd number of cards */
+.project-grid:has(> :last-child:nth-child(odd)) > :last-child {
+    grid-column: 1 / -1;
+}
+
 /* Project Cards - Matching About Window Style */
 .project-card {
     border: 2px solid #1a1a1a;
