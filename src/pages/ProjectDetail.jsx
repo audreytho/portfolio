@@ -29,10 +29,6 @@ function ProjectDetail() {
                     <h1>{project.title}</h1>
                 </div>
 
-                <div className="project-detail-image">
-                    <img src={project.image} alt={project.title} />
-                </div>
-
                 <div className="project-meta-grid">
                     <div className="project-meta-column">
                         <div className="meta-section">
@@ -78,6 +74,10 @@ function ProjectDetail() {
                             )}
                         </div>
                     </div>
+                </div>
+
+                <div className="project-detail-image">
+                    <img src={project.image} alt={project.title} />
                 </div>
 
                 {/* Media Gallery Section - For future images/videos */}
