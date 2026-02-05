@@ -92,6 +92,21 @@ useLayoutEffect(() => {
                     <img src={project.image} alt={project.title} />
                 </div>
 
+                {/* Wireframes Section */}
+                {project.wireframes && project.wireframes.length > 0 && (
+                    <div className="project-wireframes">
+                        <h2>Wireframes</h2>
+                        <div className="wireframes-grid">
+                            {project.wireframes.map((item, index) => (
+                                <div key={index} className="wireframe-item">
+                                    <img src={item.url} alt={item.caption || `Wireframe ${index + 1}`} />
+                                    {item.caption && <p className="wireframe-caption">{item.caption}</p>}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 {/* Media Gallery Section - For future images/videos */}
                 {project.gallery && project.gallery.length > 0 && (
                     <div className="project-gallery">

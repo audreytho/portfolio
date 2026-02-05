@@ -563,7 +563,7 @@ body {
 /* Project Detail Page Styles */
 .project-detail-page {
     min-height: 100vh;
-    padding: 40px 40px 40px 40px;
+    padding: 20px 40px 40px 40px;
 }
 
 .project-detail-container {
@@ -684,6 +684,41 @@ body {
 
 .team-role {
     color: #666;
+}
+
+/* Wireframes Section */
+.project-wireframes {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.project-wireframes h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.wireframes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.wireframe-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.wireframe-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* Gallery Section */
