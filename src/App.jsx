@@ -16,8 +16,15 @@ function ScrollToTop() {
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual'
         }
-        // Immediately scroll to top
-        window.scrollTo(0, 0)
+    }, [])
+    
+    useEffect(() => {
+        // Force immediate scroll with no delay
+        requestAnimationFrame(() => {
+            window.scrollTo(0, 0)
+            document.documentElement.scrollTop = 0
+            document.body.scrollTop = 0
+        })
     }, [pathname])
     
     return null

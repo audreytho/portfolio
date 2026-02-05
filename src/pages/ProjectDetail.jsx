@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import portfolioData from '../data/portfolio.json'
 
 function ProjectDetail() {
@@ -8,15 +8,14 @@ const navigate = useNavigate()
 
 const project = portfolioData.projects.find(p => p.id === parseInt(id))
 
-// Scroll to top immediately when component mounts
-useEffect(() => {
+// useLayoutEffect runs BEFORE paint, preventing visible scroll
+useLayoutEffect(() => {
 window.scrollTo(0, 0)
 }, [])
-    
-    // Also scroll to top when project ID changes
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [id])
+
+useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+}, [id])
 
     if (!project) {
         return (
