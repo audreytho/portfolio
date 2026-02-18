@@ -10,11 +10,14 @@ body {
     color: #1a1a1a;
     background: #FEFEFA;
     min-height: 100vh;
-    cursor: url('/cursor-arrow.png') 0 0, auto;
+    cursor: url('/images/cursor-arrow.png') 0 0, auto;
 }
 
-button, a, .project-card, .tab {
-    cursor: url('/cursor-pointer.png') 8 0, pointer !important;
+button,
+a,
+.project-card,
+.tab {
+    cursor: url('/images/cursor-pointer.png') 8 0, pointer !important;
 }
 
 .App {
@@ -119,7 +122,7 @@ main {
 }
 
 /* Make last card full width if odd number of cards */
-.project-grid:has(> :last-child:nth-child(odd)) > :last-child {
+.project-grid:has(> :last-child:nth-child(odd))> :last-child {
     grid-column: 1 / -1;
 }
 
@@ -138,15 +141,20 @@ main {
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     25% {
         transform: translateY(-10px);
     }
+
     50% {
         transform: translateY(-5px);
     }
+
     75% {
         transform: translateY(-7px);
     }
@@ -194,10 +202,10 @@ main {
     background-size: cover;
 }
 
-.project-card > h3,
-.project-card > p,
-.project-card > .tech-stack,
-.project-card > .links {
+.project-card>h3,
+.project-card>p,
+.project-card>.tech-stack,
+.project-card>.links {
     padding: 0 30px;
 }
 
@@ -210,7 +218,7 @@ main {
     color: #1a1a1a;
 }
 
-.project-card > p {
+.project-card>p {
     font-family: 'Inter', sans-serif;
     color: #666;
     margin-bottom: 20px;
@@ -330,29 +338,29 @@ main {
         right: 0;
         margin-bottom: 40px;
     }
-    
+
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     main {
         padding: 20px;
     }
-    
+
     #contact {
         padding: 30px 20px;
     }
-    
+
     #projects h2,
     #contact h2 {
         font-size: 20px;
     }
-    
+
     .project-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-card h3 {
         font-size: 18px;
     }
@@ -408,6 +416,7 @@ body {
         transform: translateY(-50px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -550,16 +559,16 @@ body {
     .modal-content {
         max-height: 95vh;
     }
-    
+
     .modal-header,
     .modal-body {
         padding: 20px;
     }
-    
+
     .modal-header h2 {
         font-size: 24px;
     }
-    
+
     .modal-image-container img {
         height: 250px;
     }
@@ -812,20 +821,20 @@ body {
     .project-detail-page {
         padding: 40px 20px 20px 20px;
     }
-    
+
     .project-detail-header h1 {
         font-size: 32px;
     }
-    
+
     .project-meta-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .project-links-section {
         flex-direction: column;
     }
-    
+
     .project-link-btn {
         text-align: center;
     }
