@@ -10,14 +10,14 @@ body {
     color: #1a1a1a;
     background: #FEFEFA;
     min-height: 100vh;
-    cursor: url('/images/cursor-arrow.png') 0 0, auto;
+    cursor: url('/images/cursor-arrow.png?v=2') 0 0, auto;
 }
 
 button,
 a,
 .project-card,
 .tab {
-    cursor: url('/images/cursor-pointer.png') 8 0, pointer !important;
+    cursor: url('/images/cursor-pointer.png?v=2') 8 0, pointer !important;
 }
 
 .App {
