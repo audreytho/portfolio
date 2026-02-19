@@ -6,6 +6,9 @@ const LoadingScreen = ({ isLoading }) => {
     return (
         <div className="loading-screen">
             <img src="/images/Little-Audrey-Animation.gif" alt="Loading..." className="loading-gif" />
+            <div className="loading-bar-container">
+                <div className="loading-bar-fill"></div>
+            </div>
         </div>
     );
 };
