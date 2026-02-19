@@ -907,7 +907,7 @@ body {
     height: 100%;
     background-color: #1a1a1a;
     width: 0%;
-    animation: loadingProgress 2.5s linear forwards;
+    animation: loadingProgress 8s linear forwards;
 }
 
 @keyframes loadingProgress {
