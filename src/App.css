@@ -888,4 +888,15 @@ body {
     max-width: 100%;
     max-height: 80vh;
     object-fit: contain;
+    animation: pixelWalk 4s linear infinite alternate;
+}
+
+@keyframes pixelWalk {
+    from {
+        transform: translateX(-16vw);
+    }
+
+    to {
+        transform: translateX(16vw);
+    }
 }
