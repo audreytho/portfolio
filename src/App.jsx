@@ -35,10 +35,10 @@ function App() {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        // Minimum loading time of 4s to show the animation
+        // Minimum loading time of 3s to show the animation
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 4000)
+        }, 3000)
 
         return () => clearTimeout(timer)
     }, [])
