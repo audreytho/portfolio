@@ -893,21 +893,44 @@ body {
     margin-bottom: 50px;
 }
 
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
 /* Loading Bar */
 .loading-bar-container {
-    width: 300px;
-    height: 30px;
-    border: 4px solid #1a1a1a;
-    padding: 3px;
-    background: white;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+    width: 316px;
+    /* 10 chunks of 30px plus 2x4px padding = 308 + 8 = 316px */
+    height: 44px;
+    border: 6px solid #1a1a1a;
+    padding: 4px;
+    background: transparent;
 }
 
 .loading-bar-fill {
     height: 100%;
-    background-color: #1a1a1a;
+    /* 10 chunks. Each chunk is 24px wide + 6px transparent gap = 30px */
+    background-image: repeating-linear-gradient(to right,
+            #1a1a1a 0px,
+            #1a1a1a 24px,
+            transparent 24px,
+            transparent 30px);
+    background-size: 300px 100%;
+    background-repeat: no-repeat;
     width: 0%;
-    animation: loadingProgress 3s linear forwards;
+    /* Step animation jumps every 30px (1 chunk) */
+    animation: loadingProgress 3s steps(10, end) forwards;
 }
 
 @keyframes loadingProgress {
