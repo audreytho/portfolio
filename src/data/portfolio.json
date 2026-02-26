@@ -10,7 +10,12 @@
       "title": "Steam Dreams",
       "category": "game-design",
       "description": "Managed cross-functional sprint planning across 6+ disciplines using Agile methodologies. Coordinated playtests, bug-tracking, asset pipeline management, and drove MVP execution across remote team.",
-      "tech": ["Unity", "C#", "Jira", "Agile Scrum"],
+      "tech": [
+        "Unity",
+        "C#",
+        "Jira",
+        "Agile Scrum"
+      ],
       "image": "/images/steamdreams.png",
       "links": {
         "demo": "#"
@@ -21,7 +26,11 @@
       "title": "Fortunes in the Dark",
       "category": "game-design",
       "description": "Horror survival RPG where you play as a lost traveler navigating a mysterious forest with limited resources. Currently in development for Northeastern's CAMD Fall Showcase, transitioning from analog prototype to digital game.",
-      "tech": ["Unity", "C#", "Game Design"],
+      "tech": [
+        "Unity",
+        "C#",
+        "Game Design"
+      ],
       "image": "/images/fortunesinthedark.png",
       "links": {
         "demo": "#"
@@ -32,7 +41,12 @@
       "title": "What Remains of Me",
       "category": "game-design",
       "description": "Puzzle platformer where you play as Atlas, a reactivated robot exploring an abandoned post-apocalyptic facility. Led project management team of 5, implementing Agile methodologies and driving 3000% TikTok growth for GDC 2025 showcase. Published to Steam.",
-      "tech": ["Unity", "C#", "Jira", "Agile Scrum"],
+      "tech": [
+        "Unity",
+        "C#",
+        "Jira",
+        "Agile Scrum"
+      ],
       "image": "/images/whatremainsofme.png",
       "links": {
         "demo": "https://store.steampowered.com/app/whatremainsofme",
@@ -44,7 +58,11 @@
       "title": "Wallace - Historical Interactive Fiction",
       "category": "game-design",
       "description": "2-week Halloween-themed Game Jam submission for Northeastern's Game Studio Club. PS1-inspired hyper-pixelated, low-poly aesthetic creating an eerie atmosphere with upbeat Overcooked-style gameplay. Unanimously adored by all club playtesters.",
-      "tech": ["Twine", "Unity", "JavaScript"],
+      "tech": [
+        "Twine",
+        "Unity",
+        "JavaScript"
+      ],
       "image": "/images/wallace.png",
       "links": {
         "demo": "#",
@@ -59,15 +77,34 @@
       "role": "UI/UX Design, Frontend Development, Product Design and Ideation, Backend Development",
       "duration": "Jan 2026 - Present",
       "team": [
-        {"name": "Emily Ferry"},
-        {"name": "Jahnavi Bulusu"},
-        {"name": "Jolin Yang"},
-        {"name": "Maia Gonzalez"},
-        {"name": "Rai Makaraju"},
-        {"name": "Rhea Kallely"},
-        {"name": "Riya Roy"}
+        {
+          "name": "Emily Ferry"
+        },
+        {
+          "name": "Jahnavi Bulusu"
+        },
+        {
+          "name": "Jolin Yang"
+        },
+        {
+          "name": "Maia Gonzalez"
+        },
+        {
+          "name": "Rai Makaraju"
+        },
+        {
+          "name": "Rhea Kallely"
+        },
+        {
+          "name": "Riya Roy"
+        }
       ],
-      "tech": ["React", "Node.js", "MongoDB", "UI/UX Design"],
+      "tech": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "UI/UX Design"
+      ],
       "image": "/images/recoop.png",
       "links": {
         "github": "#"
@@ -78,7 +115,13 @@
       "title": "Pact - AI-Powered Habit Tracking App",
       "category": "programming",
       "description": "Cross-platform mobile app leveraging AI to match users for personalized habit tracking. Built full-stack MVP with Google OAuth integration, featuring tailored recommendations and secure user authentication.",
-      "tech": ["React Native", "Python", "MongoDB", "Google Cloud OAuth", "Nativewind"],
+      "tech": [
+        "React Native",
+        "Python",
+        "MongoDB",
+        "Google Cloud OAuth",
+        "Nativewind"
+      ],
       "image": "/images/pact.png",
       "links": {
         "github": "https://github.com/audreytho/Pact"
@@ -89,7 +132,11 @@
       "title": "Portfolio Website",
       "category": "programming",
       "description": "A modern, responsive portfolio built with React showcasing my work in game design, programming, and visual design.",
-      "tech": ["React", "Vite", "CSS"],
+      "tech": [
+        "React",
+        "Vite",
+        "CSS"
+      ],
       "image": "/images/portfolio.png",
       "links": {
         "demo": "#",
@@ -101,8 +148,43 @@
       "title": "Character Design Collection",
       "category": "art",
       "description": "A series of original character designs exploring diverse personalities and visual styles for game development.",
-      "tech": ["Photoshop", "Illustrator", "Procreate"],
+      "tech": [
+        "Photoshop",
+        "Illustrator",
+        "Procreate"
+      ],
       "image": "/images/characters.png",
+      "links": {
+        "demo": "#"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Game AI Final Project",
+      "category": "game-design",
+      "description": "Final project for Game AI course, showcasing intelligent behaviors and game systems.",
+      "tech": [
+        "Unity",
+        "C#",
+        "Game AI"
+      ],
+      "image": "/images/portfolio.png",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Dylan Kim Portfolio Website",
+      "category": "art",
+      "description": "A UI/UX design project showcasing a portfolio website design for Dylan Kim.",
+      "tech": [
+        "Figma",
+        "UI/UX Design",
+        "Wireframing"
+      ],
+      "image": "/images/portfolio.png",
       "links": {
         "demo": "#"
       }
