@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .home-link {
@@ -36,11 +36,12 @@
     padding: 20px 40px;
     transition: all 0.3s ease;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .home-link:hover {
     color: #666;
-    transform: translateX(20px);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

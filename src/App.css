@@ -54,17 +54,13 @@ a,
     }
 }
 
-/* Header - Centered */
+/* Header - Top Right Corner (only on sub-pages) */
 header {
     position: fixed;
     top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 40px;
     z-index: 1000;
     background: transparent;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 header h2 {
@@ -74,7 +70,6 @@ header h2 {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 30px;
 }
 
